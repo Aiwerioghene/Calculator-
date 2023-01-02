@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+
+    <style>
+        body{
+            background-color: rgb(134, 255, 162);
+        }
+       .calculator{
+            float: center;
+            height: 322px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: aliceblue;
+
+        } 
+
+        .butt:hover {
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+          background-color: rgb(0, 0, 0);
+          color: aliceblue;
+         
+        }
+        .butt{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(240, 229, 229);
+        }
+        .equal{
+            width: 212px;
+            height: 50px;
+            background-color: rgb(255, 106, 0);
+         }
+         #display{
+            width: 150px;
+            height: 40px;
+            box-shadow:  0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);;
+            
+         }
+         .cancel{
+            background-color: red;
+            width: 50px;
+            height: 55px;
+
+         }
+         .mat{
+            width: 50px;
+            height: 50px;
+            background-color: chartreuse;
+         }
+
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <form name ="cal">
+            
+            <center>
+                <fieldset>
+                    <center>
+                        <div class="but"></div>
+                        <!-- the display screeen and delete button -->
+                        <input type="text" name = "display" id="display" placeholder="0" readonly> &nbsp;&nbsp;<button class="cancel"> DEL</button>
+                            
+                            <br>
+                            <br>
+                            <!-- buttons -->
+                            <input type="button" class="butt" value="7" onclick="cal.display.value +=7">
+                            <input type="button" class="butt" value="8" onclick="cal.display.value +=8">
+                            <input type="button" class="butt" value="9" onclick="cal.display.value +=9">
+                            <input type="button" class="mat" value="/" onclick="cal.display.value  +=/">
+                            <br>
+                            
+                            <input type="button" class="butt" value="4" onclick="cal.display.value +=4">
+                            <input type="button" class="butt" value="5" onclick="cal.display.value +=5">
+                            <input type="button" class="butt" value="6" onclick="cal.display.value +=6">
+                            <input type="button" class="mat" value="*" onclick="cal.display.value +='*'">
+                            <br>
+                            <input type="button" class="butt" value="1" onclick="cal.display.value +=1">
+                            <input type="button" class="butt" value="2" onclick="cal.display.value +=2">
+                            <input type="button" class="butt" value="3" onclick="cal.display.value +=3">
+                            <input type="button" class="mat" value="-" onclick="cal.display.value +='-'">
+                            <br>
+                            <input type="button" class="mat" value="." onclick="cal.display.value +='.'">
+                            <input type="button" class="butt" value="0" onclick="cal.display.value +=0">
+                            <input type="button" class="mat" value="+" onclick="cal.display.value +='+'">
+                            <input type="button" class="mat" value="%" onclick="cal.display.value +='%'">
+                            
+                            
+                            <br>
+                            <input type="button" class="equal" value="=" onclick="cal.display.value=eval(cal.display.value)">
+                            
+                            
+
+
+                       
+                        </div>
+        
+                    </center>
+                      
+                  
+                </fieldset>  
+                
+            </center>
+            
+        </form>
+   
+</div>
+</body>
+
+</script>
+</html>
